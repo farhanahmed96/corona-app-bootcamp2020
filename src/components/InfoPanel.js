@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 1000,
         margin: '0 auto',
         marginTop: 50,
+        marginBottom: 70,
     },
     paper: {
         padding: theme.spacing(2),
@@ -20,8 +21,10 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function InfoPanel() {
+export default function InfoPanel({currentScreen}) {
     const [globalData, setGlobalData] = useState({});
+
+    console.log({currentScreen})
 
     useEffect(() => {
         async function getData() {
